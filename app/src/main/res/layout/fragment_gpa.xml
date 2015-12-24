@@ -1,0 +1,178 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.or_oz.practicalculator.GPAFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Course"
+            android:id="@+id/courseTV"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="51dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Grade"
+            android:id="@+id/gradeTV"
+            android:layout_alignBottom="@+id/courseTV"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Credits"
+            android:id="@+id/creditsTV"
+            android:layout_alignBottom="@+id/gradeTV"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_alignTop="@+id/gradeTV"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:ems="4"
+            android:layout_below="@+id/courseTV"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/gradeTV"
+            android:layout_alignLeft="@+id/gradeTV"
+            android:layout_alignStart="@+id/gradeTV"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText2"
+            android:layout_alignRight="@+id/creditsTV"
+            android:layout_alignEnd="@+id/creditsTV"
+            android:layout_below="@+id/creditsTV"
+            android:layout_alignLeft="@+id/creditsTV"
+            android:layout_alignStart="@+id/creditsTV"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:ems="4"
+            android:layout_below="@+id/editText"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:spinnerMode="dropdown"
+            android:layout_alignTop="@+id/editText3"
+            android:layout_toEndOf="@+id/editText3"
+            android:layout_alignLeft="@+id/spinner1"
+            android:layout_alignStart="@+id/spinner1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText4"
+            android:layout_below="@+id/editText2"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_alignEnd="@+id/editText2"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText5"
+            android:ems="4"
+            android:layout_below="@+id/editText3"
+            android:layout_alignLeft="@+id/editText3"
+            android:layout_alignStart="@+id/editText3"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/editText4"
+            android:layout_alignLeft="@+id/spinner2"
+            android:layout_alignStart="@+id/spinner2"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText6"
+            android:layout_alignTop="@+id/spinner"
+            android:layout_alignLeft="@+id/editText4"
+            android:layout_alignStart="@+id/editText4"
+            android:layout_alignRight="@+id/editText4"
+            android:layout_alignEnd="@+id/editText4"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText7"
+            android:ems="4"
+            android:layout_below="@+id/editText5"
+            android:layout_alignLeft="@+id/editText5"
+            android:layout_alignStart="@+id/editText5"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner3"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/editText6"
+            android:layout_alignLeft="@+id/spinner"
+            android:layout_alignStart="@+id/spinner"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText8"
+            android:layout_alignTop="@+id/spinner3"
+            android:layout_alignRight="@+id/editText6"
+            android:layout_alignEnd="@+id/editText6"
+            android:layout_alignLeft="@+id/editText6"
+            android:layout_alignStart="@+id/editText6"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

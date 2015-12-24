@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.or_oz.practicalculator.tipFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/billTotal"
+            android:hint="Bill Total"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/tipPercent"
+            android:layout_alignEnd="@+id/tipPercent"/>
+
+        <EditText
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/tipPercent"
+            android:hint="Tip Percentage"
+            android:layout_gravity="right|top"
+            android:layout_below="@+id/billTotal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/partySize"
+            android:hint="# People to Split Bill"
+            android:layout_below="@+id/tipPercent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/tipPercent"
+            android:layout_alignEnd="@+id/tipPercent"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:id="@+id/fifteenPercent"
+            android:layout_alignTop="@+id/tenPercent"
+            android:layout_toRightOf="@+id/tenPercent"
+            android:layout_toEndOf="@+id/tenPercent"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:id="@+id/tenPercent"
+            android:layout_below="@+id/billTotal"
+            android:layout_toRightOf="@+id/tipPercent"
+            android:layout_toEndOf="@+id/tipPercent"
+            android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:id="@+id/twentyPercent"
+            android:layout_alignTop="@+id/fifteenPercent"
+            android:layout_toRightOf="@+id/fifteenPercent"
+            android:layout_toEndOf="@+id/fifteenPercent"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round Total"
+            android:id="@+id/checkBox"
+            android:layout_below="@+id/partySize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/subtotal"
+            android:layout_below="@+id/checkBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Total"
+            android:id="@+id/subtotalTitle"
+            android:layout_alignTop="@+id/subtotal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Per Person"
+            android:id="@+id/subtotalPPTitle"
+            android:layout_below="@+id/subtotal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="45dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/subtotalPP"
+            android:layout_alignTop="@+id/subtotalPPTitle"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Tip Amount"
+            android:id="@+id/tipAmountTitle"
+            android:layout_below="@+id/checkBox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tipAmount"
+            android:layout_alignBottom="@+id/tipAmountTitle"
+            android:layout_alignLeft="@+id/subtotalPP"
+            android:layout_alignStart="@+id/subtotalPP"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

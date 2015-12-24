@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:title="Money">
+        <menu>
+            <item
+                android:id="@+id/nav_tip"
+                android:icon="@drawable/ic_restaurant"
+                android:title="@string/tip"/>
+            <item
+                android:id="@+id/nav_sale"
+                android:icon="@drawable/ic_dollar_sign"
+                android:title="@string/sale_price"/>
+        </menu>
+    </item>
+
+
+    <item android:title="Education">
+        <menu>
+            <item
+                android:id="@+id/nav_gpa"
+              android:icon="@drawable/ic_school"
+             android:title="@string/gpa"/>
+             <item
+              android:id="@+id/nav_unit"
+              android:icon="@drawable/ic_menu_manage"
+             android:title="@string/unit"/>
+        </menu>
+    </item>
+
+
+    <item android:title="Fitness">
+        <menu>
+            <item
+                android:id="@+id/nav_bmi"
+                android:icon="@drawable/ic_fitness"
+                android:title="@string/bmi"/>
+
+        </menu>
+    </item>
+
+</menu>
