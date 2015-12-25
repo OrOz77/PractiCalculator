@@ -23,10 +23,10 @@
                 android:id="@+id/nav_gpa"
               android:icon="@drawable/ic_school"
              android:title="@string/gpa"/>
-             <item
+            <!-- <item
               android:id="@+id/nav_unit"
               android:icon="@drawable/ic_menu_manage"
-             android:title="@string/unit"/>
+             android:title="@string/unit"/>-->
         </menu>
     </item>
 

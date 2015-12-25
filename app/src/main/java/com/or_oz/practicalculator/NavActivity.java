@@ -99,14 +99,16 @@ public class NavActivity extends AppCompatActivity
             TipFragment tFrag = new TipFragment();
             ft.replace(R.id.fragment_container,tFrag).commit();
         } else if (id == R.id.nav_sale) {
+            SaleFragment sFrag = new SaleFragment();
+            ft.replace(R.id.fragment_container,sFrag).commit();
 
         } else if (id == R.id.nav_gpa) {
             GPAFragment gpaFrag = new GPAFragment();
             ft.replace(R.id.fragment_container,gpaFrag).commit();
 
-        } else if (id == R.id.nav_unit) {
+        } /*else if (id == R.id.nav_unit) {
 
-        } else if (id == R.id.nav_bmi) {
+        }*/ else if (id == R.id.nav_bmi) {
             BMIFragment bmiFrag = new BMIFragment();
             ft.replace(R.id.fragment_container,bmiFrag).commit();
         }
