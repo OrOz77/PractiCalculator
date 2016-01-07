@@ -23,6 +23,10 @@
                 android:id="@+id/nav_gpa"
               android:icon="@drawable/ic_school"
              android:title="@string/gpa"/>
+            <item
+                android:id="@+id/nav_binary"
+                android:icon="@drawable/ic_numeric_1_box"
+                android:title="@string/binary"/>
             <!-- <item
               android:id="@+id/nav_unit"
               android:icon="@drawable/ic_menu_manage"
