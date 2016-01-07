@@ -111,6 +111,9 @@ public class NavActivity extends AppCompatActivity
         }*/ else if (id == R.id.nav_bmi) {
             BMIFragment bmiFrag = new BMIFragment();
             ft.replace(R.id.fragment_container,bmiFrag).commit();
+        } else if (id == R.id.nav_binary){
+            BinaryFragment binaryFrag = new BinaryFragment();
+            ft.replace(R.id.fragment_container,binaryFrag).commit();
         }
 
         setTitle(item.getTitle() + " Calculator");

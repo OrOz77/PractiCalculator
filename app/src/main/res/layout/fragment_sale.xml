@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.or_oz.practicalculator.SaleFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="6"
+            android:hint="Original Price"
+            android:id="@+id/originalPriceEdit"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="86dp"
+            tools:targetApi="jelly_bean_mr1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="4"
+            android:hint="Discount"
+            android:id="@+id/salePercentEdit"
+            android:layout_below="@+id/originalPriceEdit"
+            android:layout_toRightOf="@+id/originalPriceEdit"
+            android:layout_toEndOf="@+id/originalPriceEdit"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="You saved $"
+            android:id="@+id/youSavedTV"
+            android:layout_below="@+id/salePercentEdit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="133dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/amountSavedTV"
+            android:layout_alignTop="@+id/youSavedTV"
+            android:layout_toRightOf="@+id/youSavedTV"
+            android:layout_toEndOf="@+id/youSavedTV"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:editable="false"
+            android:ems="6"
+            android:hint="Final Price"
+            android:id="@+id/finalPriceEdit"
+            android:layout_below="@+id/salePercentEdit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="22dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Enter the original price and percent discount"
+            android:id="@+id/instructionsTV"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="%"
+            android:id="@+id/percentSignTV"
+            android:paddingTop="7dp"
+            android:layout_alignTop="@+id/salePercentEdit"
+            android:layout_toRightOf="@+id/salePercentEdit"
+            android:layout_toEndOf="@+id/salePercentEdit"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
