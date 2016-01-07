@@ -9,6 +9,6 @@ with minimal confusion.
 
 Upon launch, the calculators provided are:
 
-Tip, Sale, GPA, and BMI.
+Tip, Sale, GPA, Binary, and BMI.
 
 The first big update will include a unit conversion system with many options to choose from.
