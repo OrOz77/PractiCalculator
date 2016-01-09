@@ -25,6 +25,7 @@ public class BinaryFragment extends Fragment {
         // Required empty public constructor
     }
 
+    //TODO fix binary calc, maybe add hex calc
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
