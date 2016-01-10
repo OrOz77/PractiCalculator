@@ -2,6 +2,7 @@ package com.or_oz.practicalculator;
 
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,12 +21,13 @@ public class BinaryFragment extends Fragment {
     TextView resultTV;
     final String[] conversionTypes = new String[]{"Binary", "Decimal"};
     int id,input,output;
+    String outputString;
 
     public BinaryFragment() {
         // Required empty public constructor
     }
 
-    //TODO fix binary calc, maybe add hex calc
+    //TODO fix overflow int issue
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +58,9 @@ public class BinaryFragment extends Fragment {
     }
 
     private void calculate() {
+        if(!inputEditText.getText().toString().equalsIgnoreCase("")){
+            input = Integer.parseInt(inputEditText.getText().toString());
+        }else input=0;
         switch(fromSpinner.getSelectedItemPosition()){
             case 0:
                 //fromSpinner is Binary
@@ -80,6 +85,13 @@ public class BinaryFragment extends Fragment {
             case 1:
                 //Binary -> Decimal
                 //toSpinner is Decimal
+                outputString = inputEditText.getText().toString();
+                if(outputString.matches("[01]+")){
+                    output = Integer.parseInt(outputString,2);
+                }else{
+                    output = 0;
+                    Snackbar.make(v, "Input must be binary", Snackbar.LENGTH_LONG).show();
+                }
 
                 break;
         }
@@ -90,7 +102,8 @@ public class BinaryFragment extends Fragment {
             case 0:
                 //Decimal -> Binary
                 //toSpinner is Binary
-                output = Integer.parseInt(Integer.toBinaryString(input));
+                outputString = Integer.toBinaryString(input);
+                output = Integer.parseInt(outputString);
                 break;
             case 1:
                 //Decimal -> Decimal
