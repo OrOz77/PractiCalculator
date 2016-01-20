@@ -27,7 +27,7 @@ public class BinaryFragment extends Fragment {
         // Required empty public constructor
     }
 
-    //TODO fix overflow int issue
+    //TODO fix overflow int issue for binary -> decimal, length to be less than 11
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,8 +102,14 @@ public class BinaryFragment extends Fragment {
             case 0:
                 //Decimal -> Binary
                 //toSpinner is Binary
-                outputString = Integer.toBinaryString(input);
-                output = Integer.parseInt(outputString);
+                if(input<1024){
+                    outputString = Integer.toBinaryString(input);
+                    output = Integer.parseInt(outputString);
+                } else {
+                    output = 0;
+                    Snackbar.make(v, "Decimal input must be less than 1024", Snackbar.LENGTH_LONG).show();
+                }
+
                 break;
             case 1:
                 //Decimal -> Decimal
