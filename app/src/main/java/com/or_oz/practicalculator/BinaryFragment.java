@@ -27,7 +27,6 @@ public class BinaryFragment extends Fragment {
         // Required empty public constructor
     }
 
-    //TODO fix overflow int issue for binary -> decimal, length to be less than 11
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,9 +57,12 @@ public class BinaryFragment extends Fragment {
     }
 
     private void calculate() {
-        if(!inputEditText.getText().toString().equalsIgnoreCase("")){
+        if(!inputEditText.getText().toString().equalsIgnoreCase("") && inputEditText.getText().length() <=10){
             input = Integer.parseInt(inputEditText.getText().toString());
-        }else input=0;
+        }else{
+            Snackbar.make(v, "Input must be less than 11 digits", Snackbar.LENGTH_LONG).show();
+            input=0;
+        }
         switch(fromSpinner.getSelectedItemPosition()){
             case 0:
                 //fromSpinner is Binary
@@ -87,7 +89,13 @@ public class BinaryFragment extends Fragment {
                 //toSpinner is Decimal
                 outputString = inputEditText.getText().toString();
                 if(outputString.matches("[01]+")){
-                    output = Integer.parseInt(outputString,2);
+                    if(outputString.length()<=10){
+                        output = Integer.parseInt(outputString,2);
+                    } else {
+                        output = 0;
+                        Snackbar.make(v, "Binary input must be less than 11 bits", Snackbar.LENGTH_LONG).show();
+                    }
+
                 }else{
                     output = 0;
                     Snackbar.make(v, "Input must be binary", Snackbar.LENGTH_LONG).show();

@@ -20,9 +20,8 @@ public class NavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FloatingActionButton fab;
 
-    //http://www.androidhive.info/2015/04/android-getting-started-with-material-design/
-    //https://www.youtube.com/watch?v=5b6AGSh4dVE
-    // http://developer.android.com/guide/topics/ui/controls/text.html
+//TODO add google analytics
+    //TODO add about activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
