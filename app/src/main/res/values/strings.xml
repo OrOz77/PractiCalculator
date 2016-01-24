@@ -20,7 +20,16 @@
     <string name="pounds">lbs</string>
     <string name="kilograms">kg</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="binary">Binary</string>
+    <string name="about">About</string>
+    <string name="title_activity_about">About PractiCalculator</string>
+
+    <string name="aboutInformation"> <b>Tip</b> calculates a tip amount based on input percentage \n\n
+        <b>Sale Price</b> shows how much a discount affects a price\n\n
+        <b>GPA</b> calculates GPA based on a 4.0 scale (ie A = 4.0, A- = 3.67, …) \n\n
+        <b>Binary</b> offers conversion between binary and decimal numbers \n\n
+        <b>Body Mass Index</b> calculates BMI based on inputs
+    </string>
 </resources>

@@ -3,6 +3,7 @@ package com.or_oz.practicalculator;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,8 +21,7 @@ public class NavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FloatingActionButton fab;
 
-//TODO add google analytics
-    //TODO add about activity
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +79,9 @@ public class NavActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
             return true;
         }
 
