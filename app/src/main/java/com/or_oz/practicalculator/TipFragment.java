@@ -3,7 +3,6 @@ package com.or_oz.practicalculator;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.SpannableStringBuilder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import android.widget.TextView;
 public class TipFragment extends Fragment {
     View v;
     EditText billTotal, tipPercentage, partySize;
-    Button ten,fifteen,twenty;
+    Button fifteen, eighteen,twenty;
     TextView subtotal, subtotalPP, tipAmount;
     CheckBox round;
     Double billT,tipP,partyS,subT,subTPP,tipA;
@@ -89,21 +88,21 @@ public class TipFragment extends Fragment {
         billTotal = (EditText)v.findViewById(R.id.billTotal);
         tipPercentage = (EditText)v.findViewById(R.id.tipPercent);
         partySize = (EditText)v.findViewById(R.id.partySize);
-        ten = (Button)v.findViewById(R.id.tenPercent);
         fifteen = (Button)v.findViewById(R.id.fifteenPercent);
+        eighteen = (Button)v.findViewById(R.id.eighteenPercent);
         twenty = (Button)v.findViewById(R.id.twentyPercent);
         round = (CheckBox)v.findViewById(R.id.checkBox);
 
-        ten.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tipPercentage.setText("10");
-            }
-        });
         fifteen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tipPercentage.setText("15");
+            }
+        });
+        eighteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tipPercentage.setText("18");
             }
         });
         twenty.setOnClickListener(new View.OnClickListener() {

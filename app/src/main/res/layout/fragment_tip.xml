@@ -55,18 +55,18 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%"
-            android:id="@+id/fifteenPercent"
-            android:layout_alignTop="@+id/tenPercent"
-            android:layout_toRightOf="@+id/tenPercent"
-            android:layout_toEndOf="@+id/tenPercent"/>
+            android:text="18%"
+            android:id="@+id/eighteenPercent"
+            android:layout_alignTop="@+id/fifteenPercent"
+            android:layout_toRightOf="@+id/fifteenPercent"
+            android:layout_toEndOf="@+id/fifteenPercent"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%"
-            android:id="@+id/tenPercent"
+            android:text="15%"
+            android:id="@+id/fifteenPercent"
             android:layout_below="@+id/billTotal"
             android:layout_toRightOf="@+id/tipPercent"
             android:layout_toEndOf="@+id/tipPercent"
@@ -79,9 +79,9 @@
             android:layout_height="wrap_content"
             android:text="20%"
             android:id="@+id/twentyPercent"
-            android:layout_alignTop="@+id/fifteenPercent"
-            android:layout_toRightOf="@+id/fifteenPercent"
-            android:layout_toEndOf="@+id/fifteenPercent"/>
+            android:layout_alignTop="@+id/eighteenPercent"
+            android:layout_toRightOf="@+id/eighteenPercent"
+            android:layout_toEndOf="@+id/eighteenPercent"/>
 
         <CheckBox
             android:layout_width="wrap_content"
